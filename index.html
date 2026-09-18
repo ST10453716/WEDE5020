@@ -1,65 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tshinakaho Haven - A place where every child feels loved, safe and at home.">
-<title>Home | Tshinakaho Haven</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Tshinakaho Haven is a proposed non-profit children's home providing a safe, caring and supportive environment for orphaned and vulnerable children."
+    >
+
+    <title>Tshinakaho Haven | Children's Home</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <!-- ========================================
+         HEADER AND NAVIGATION
+    ========================================= -->
+    <header>
+        <h1>Tshinakaho Haven</h1>
 
-<!-- Header -->
-<header>
-<h1>Tshinakaho Haven</h1>
-<p>A place where every child feels loved, safe and at home.</p>
-<nav>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="beneficiaries.html">Who We Help</a></li>
-<li><a href="enquiry.html">Enquiry / Get Involved</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-</ul>
-</nav>
-</header>
+        <p>A place where every child feels loved, safe and at home.</p>
 
-<!-- Main content -->
-<main>
-<section>
-<h2>Welcome to Tshinakaho Haven</h2>
-<p>Tshinakaho Haven is a non-profit children's home based in Midrand, Gauteng. We aim to provide a safe, caring and supportive home for orphaned and vulnerable children.</p>
-<img src="images/hero-diverse-children.jpg" alt="Diverse children learning and spending time together">
-<p>We aim to create a family-like environment where every child feels loved, safe, respected, valued, accepted and supported.</p>
-<p><a href="about.html">Learn more about us</a></p>
-</section>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="beneficiaries.html">Who We Help</a>
+                </li>
+                <li>
+                    <a href="enquiry.html">Enquiry</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-<section>
-<h2>What We Provide</h2>
-<ul>
-<li>Safe accommodation</li>
-<li>Food and nutrition</li>
-<li>Educational support</li>
-<li>Clothing and personal care</li>
-<li>Emotional support</li>
-<li>Recreation and development</li>
-<li>Life skills</li>
-</ul>
-<p><a href="services.html">View our services</a></p>
-</section>
 
-<section>
-<h2>Get Involved</h2>
-<p>Volunteers, donors, sponsors, community members and business partners can help support Tshinakaho Haven.</p>
-<p><a href="enquiry.html">Get involved</a></p>
-</section>
-</main>
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+    <main>
 
-<!-- Footer -->
-<footer>
-<p>&copy; 2026 Tshinakaho Haven</p>
-<p>Midrand, Gauteng, South Africa</p>
-</footer>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="section-label">A Safe Place To Belong</p>
 
+                <p>
+                    Tshinakaho Haven is a proposed non-profit children's home
+                    dedicated to providing a safe, caring and supportive
+                    environment for orphaned and vulnerable children.
+                </p>
+
+                <p>
+                    Our aim is to create a family-like home where children feel
+                    loved, respected, valued and supported as they grow.
+                </p>
+
+                <div class="hero-actions">
+                    <a
+                        href="about.html"
+                        class="primary-button"
+                    >
+                        Learn More
+                    </a>
+
+                    <a
+                        href="enquiry.html"
+                        class="secondary-button"
+                    >
+                        Get Involved
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="images/hero-diverse-children.jpg"
+                    alt="Children spending time together outdoors"
+                >
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             OUR PURPOSE
+        ========================================= -->
+        <section class="home-about">
+            <div class="section-heading">
+                <p class="section-label">Our Purpose</p>
+
+                <h2>Creating a safe and supportive home.</h2>
+
+                <p>
+                    Tshinakaho Haven aims to provide more than accommodation.
+                    We want to create an environment where children receive the
+                    care, support and opportunities they need to develop
+                    physically, emotionally, socially and academically.
+                </p>
+            </div>
+
+            <a
+                href="about.html"
+                class="primary-button"
+            >
+                About Tshinakaho Haven
+            </a>
+        </section>
+
+
+        <!-- ========================================
+             SERVICES PREVIEW
+        ========================================= -->
+        <section class="services-preview">
+            <div class="section-heading">
+                <p class="section-label">What We Provide</p>
+
+                <h2>Supporting every part of a child's development.</h2>
+
+                <p>
+                    Our proposed services focus on creating a stable environment
+                    where children can feel safe, continue their education and
+                    develop the skills they need for the future.
+                </p>
+            </div>
+
+            <div class="service-grid">
+                <article>
+                    <h3>Safe Accommodation</h3>
+
+                    <p>
+                        A stable, comfortable and caring place where children
+                        can feel protected and at home.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Food &amp; Nutrition</h3>
+
+                    <p>
+                        Nutritious meals that support children's health,
+                        wellbeing and development.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Educational Support</h3>
+
+                    <p>
+                        Homework assistance, school supplies, learning
+                        resources and a suitable environment for studying.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Personal Care</h3>
+
+                    <p>
+                        Clothing and everyday personal care essentials that
+                        promote dignity and wellbeing.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Emotional Support</h3>
+
+                    <p>
+                        A caring environment where children feel heard,
+                        respected, valued and supported.
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Life Skills</h3>
+
+                    <p>
+                        Opportunities to build confidence, relationships and
+                        practical skills for greater independence.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             GET INVOLVED
+        ========================================= -->
+        <section class="get-involved">
+            <div>
+                <p class="section-label">Make A Difference</p>
+
+                <h2>Help us build a brighter future for children.</h2>
+
+                <p>
+                    Tshinakaho Haven will depend on the support of individuals,
+                    volunteers, donors, sponsors and community partners who
+                    share our vision of creating a safe and supportive home for
+                    vulnerable children.
+                </p>
+
+                <a href="enquiry.html">
+                    Find out how you can get involved
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ========================================
+             CONTACT AND LOCATION
+        ========================================= -->
+        <section class="home-contact">
+            <div class="home-contact-details">
+                <p class="section-label">Contact &amp; Location</p>
+
+                <h2>Come and connect with us.</h2>
+
+                <p class="contact-intro">
+                    If you would like more information about Tshinakaho Haven,
+                    volunteering, donations, sponsorships or partnerships,
+                    please get in touch with us.
+                </p>
+
+                <div class="home-contact-item">
+                    <span>Phone</span>
+
+                    <a href="tel:+27845630982">
+                        +27 84 563 0982
+                    </a>
+                </div>
+
+                <div class="home-contact-item">
+                    <span>Address</span>
+
+                    <address>
+                        56 Mozart Lane<br>
+                        Sagewood<br>
+                        South Africa
+                    </address>
+                </div>
+
+                <a
+                    href="contact.html"
+                    class="home-contact-link"
+                >
+                    View Contact Details
+                </a>
+            </div>
+
+            <div class="home-map">
+                <iframe
+                    src="https://www.google.com/maps?q=56+Mozart+Lane+Sagewood+South+Africa&output=embed"
+                    title="Map showing Tshinakaho Haven location"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+
+                <div class="map-address">
+                    <span>Our Location</span>
+
+                    <strong>
+                        56 Mozart Lane, Sagewood
+                    </strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+    <footer>
+        <p>&copy; 2026 Tshinakaho Haven</p>
+
+        <p>
+            56 Mozart Lane, Sagewood, South Africa
+        </p>
+
+        <p>
+            <a href="tel:+27845630982">
+                +27 84 563 0982
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
