@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Explore the services and support Tshinakaho Haven aims to provide for orphaned and vulnerable children.">
+    <meta
+        name="description"
+        content="Explore the services and support Tshinakaho Haven aims to provide for orphaned and vulnerable children."
+    >
 
     <title>Services | Tshinakaho Haven</title>
 
@@ -16,50 +20,50 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body>
-
     <!-- ========================================
          HEADER AND NAVIGATION
-         ======================================== -->
-
+    ========================================= -->
     <header>
-
         <h1>Tshinakaho Haven</h1>
 
         <p>A place where every child feels loved, safe and at home.</p>
 
         <nav aria-label="Main navigation">
-
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="beneficiaries.html">Who We Help</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="services.html" aria-current="page">Services</a>
+                </li>
+                <li>
+                    <a href="beneficiaries.html">Who We Help</a>
+                </li>
+                <li>
+                    <a href="enquiry.html">Enquiry</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
             </ul>
-
         </nav>
-
     </header>
 
 
     <!-- ========================================
          MAIN CONTENT
-         ======================================== -->
-
+    ========================================= -->
     <main>
-
 
         <!-- ====================================
              SERVICES HERO
-             ==================================== -->
-
+        ===================================== -->
         <section class="services-hero">
-
             <div class="services-hero-content">
-
                 <p class="section-label">
                     Our Services
                 </p>
@@ -81,30 +85,41 @@
                     to give children the support and opportunities
                     they need to grow with confidence.
                 </p>
-
             </div>
-
 
             <!-- Services Image -->
-
             <div class="services-hero-image">
+                <picture>
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="images/education-support-480.jpg"
+                    >
 
-                <img src="images/education-support.jpg"
-                     alt="Children receiving educational support">
+                    <source
+                        media="(max-width: 899px)"
+                        srcset="images/education-support-800.jpg"
+                    >
 
+                    <img
+                        src="images/education-support.jpg"
+                        srcset="
+                            images/education-support-480.jpg 480w,
+                            images/education-support-800.jpg 800w,
+                            images/education-support.jpg 2048w
+                        "
+                        sizes="(max-width: 600px) 92vw, (max-width: 899px) 90vw, 42vw"
+                        alt="Children receiving educational support"
+                    >
+                </picture>
             </div>
-
         </section>
 
 
         <!-- ====================================
              SERVICES INTRODUCTION
-             ==================================== -->
-
+        ===================================== -->
         <section class="services-intro">
-
             <div class="section-heading">
-
                 <p class="section-label">
                     What We Provide
                 </p>
@@ -119,26 +134,19 @@
                     feel safe, continue their education, develop
                     important life skills and enjoy their childhood.
                 </p>
-
             </div>
-
         </section>
 
 
         <!-- ====================================
              SERVICE CUE CARDS
              CSS-ONLY HORIZONTAL CARD DECK
-             ==================================== -->
-
+        ===================================== -->
         <section class="services-page-section">
-
             <div class="service-card-deck">
 
-
                 <!-- Service 01 -->
-
                 <article class="service-cue-card">
-
                     <span class="service-number">
                         01
                     </span>
@@ -156,14 +164,11 @@
                     <span class="card-hint">
                         Swipe to explore &rarr;
                     </span>
-
                 </article>
 
 
                 <!-- Service 02 -->
-
                 <article class="service-cue-card">
-
                     <span class="service-number">
                         02
                     </span>
@@ -180,14 +185,11 @@
                     <span class="card-hint">
                         Keep exploring &rarr;
                     </span>
-
                 </article>
 
 
                 <!-- Service 03 -->
-
                 <article class="service-cue-card">
-
                     <span class="service-number">
                         03
                     </span>
@@ -205,14 +207,11 @@
                     <span class="card-hint">
                         Keep exploring &rarr;
                     </span>
-
                 </article>
 
 
                 <!-- Service 04 -->
-
                 <article class="service-cue-card">
-
                     <span class="service-number">
                         04
                     </span>
@@ -230,14 +229,11 @@
                     <span class="card-hint">
                         Keep exploring &rarr;
                     </span>
-
                 </article>
 
 
                 <!-- Service 05 -->
-
                 <article class="service-cue-card">
-
                     <span class="service-number">
                         05
                     </span>
@@ -254,14 +250,11 @@
                     <span class="card-hint">
                         Keep exploring &rarr;
                     </span>
-
                 </article>
 
 
                 <!-- Service 06 -->
-
                 <article class="service-cue-card">
-
                     <span class="service-number">
                         06
                     </span>
@@ -279,23 +272,16 @@
                     <span class="card-hint">
                         Get involved &darr;
                     </span>
-
                 </article>
-
-
             </div>
-
         </section>
 
 
         <!-- ====================================
              SUPPORT APPROACH
-             ==================================== -->
-
+        ===================================== -->
         <section class="support-approach">
-
             <div class="support-approach-content">
-
                 <p class="section-label">
                     Our Approach
                 </p>
@@ -311,14 +297,10 @@
                     educational and social development together.
                 </p>
 
-
                 <div class="support-list">
 
-
                     <!-- Physical Wellbeing -->
-
                     <div class="support-item">
-
                         <h3>
                             Physical Wellbeing
                         </h3>
@@ -327,14 +309,11 @@
                             A safe home, nutritious food, clothing
                             and personal care.
                         </p>
-
                     </div>
 
 
                     <!-- Education -->
-
                     <div class="support-item">
-
                         <h3>
                             Education
                         </h3>
@@ -343,14 +322,11 @@
                             Learning support, school resources and
                             opportunities to develop academically.
                         </p>
-
                     </div>
 
 
                     <!-- Emotional Wellbeing -->
-
                     <div class="support-item">
-
                         <h3>
                             Emotional Wellbeing
                         </h3>
@@ -359,14 +335,11 @@
                             A caring environment where children
                             feel valued, respected and supported.
                         </p>
-
                     </div>
 
 
                     <!-- Personal Development -->
-
                     <div class="support-item">
-
                         <h3>
                             Personal Development
                         </h3>
@@ -376,25 +349,18 @@
                             life skills that help children prepare
                             for their future.
                         </p>
-
                     </div>
 
-
                 </div>
-
             </div>
-
         </section>
 
 
         <!-- ====================================
              GET INVOLVED
-             ==================================== -->
-
+        ===================================== -->
         <section class="services-cta">
-
             <div>
-
                 <p class="section-label">
                     Support Our Work
                 </p>
@@ -414,21 +380,15 @@
                         Get Involved
                     </a>
                 </p>
-
             </div>
-
         </section>
-
-
     </main>
 
 
     <!-- ========================================
          FOOTER
-         ======================================== -->
-
+    ========================================= -->
     <footer>
-
         <p>
             &copy; 2026 Tshinakaho Haven
         </p>
@@ -442,10 +402,7 @@
                 +27 84 563 0982
             </a>
         </p>
-
     </footer>
-
-
 </body>
 
 </html>

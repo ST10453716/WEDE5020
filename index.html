@@ -87,10 +87,28 @@
             </div>
 
             <div class="hero-image">
-                <img
-                    src="images/hero-diverse-children.jpg"
-                    alt="Children spending time together outdoors"
-                >
+                <picture>
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="images/hero-diverse-children-480.jpg"
+                    >
+
+                    <source
+                        media="(max-width: 899px)"
+                        srcset="images/hero-diverse-children-800.jpg"
+                    >
+
+                    <img
+                        src="images/hero-diverse-children.jpg"
+                        srcset="
+                            images/hero-diverse-children-480.jpg 480w,
+                            images/hero-diverse-children-800.jpg 800w,
+                            images/hero-diverse-children.jpg 2048w
+                        "
+                        sizes="(max-width: 600px) 92vw, (max-width: 899px) 90vw, 42vw"
+                        alt="Children spending time together outdoors"
+                    >
+                </picture>
             </div>
         </section>
 

@@ -3,7 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
@@ -16,28 +20,47 @@
 </head>
 
 <body>
-
-    <!-- Header -->
+    <!-- ========================================
+         HEADER AND NAVIGATION
+    ========================================= -->
     <header>
         <h1>Tshinakaho Haven</h1>
+
         <p>A place where every child feels loved, safe and at home.</p>
 
         <nav aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="beneficiaries.html">Who We Help</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="beneficiaries.html" aria-current="page">Who We Help</a>
+                </li>
+                <li>
+                    <a href="enquiry.html">Enquiry</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
     <main>
 
-        <!-- Hero Section -->
+        <!-- ====================================
+             HERO SECTION
+        ===================================== -->
         <section class="beneficiaries-hero">
             <div class="beneficiaries-hero-content">
                 <p class="section-label">Who We Help</p>
@@ -57,14 +80,35 @@
             </div>
 
             <div class="beneficiaries-hero-image">
-                <img
-                    src="images/children-playing.jpg"
-                    alt="Children playing together outdoors"
-                >
+                <picture>
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="images/children-playing-480.jpg"
+                    >
+
+                    <source
+                        media="(max-width: 899px)"
+                        srcset="images/children-playing-800.jpg"
+                    >
+
+                    <img
+                        src="images/children-playing.jpg"
+                        srcset="
+                            images/children-playing-480.jpg 480w,
+                            images/children-playing-800.jpg 800w,
+                            images/children-playing.jpg 1365w
+                        "
+                        sizes="(max-width: 600px) 92vw, (max-width: 899px) 90vw, 42vw"
+                        alt="Children playing together outdoors"
+                    >
+                </picture>
             </div>
         </section>
 
-        <!-- Who We Support -->
+
+        <!-- ====================================
+             WHO WE SUPPORT
+        ===================================== -->
         <section class="who-we-support">
             <div class="section-heading">
                 <p class="section-label">Our Beneficiaries</p>
@@ -88,7 +132,10 @@
             </div>
         </section>
 
-        <!-- Circumstances Section -->
+
+        <!-- ====================================
+             CIRCUMSTANCES SECTION
+        ===================================== -->
         <section class="circumstances-section">
             <div class="section-heading">
                 <p class="section-label">When Support May Be Needed</p>
@@ -103,7 +150,6 @@
             </div>
 
             <div class="circumstances-grid">
-
                 <article class="circumstance-card">
                     <span class="circumstance-number">01</span>
 
@@ -148,11 +194,13 @@
                         can be met.
                     </p>
                 </article>
-
             </div>
         </section>
 
-        <!-- What Every Child Deserves -->
+
+        <!-- ====================================
+             WHAT EVERY CHILD DESERVES
+        ===================================== -->
         <section class="child-deserves-section">
             <div class="section-heading">
                 <p class="section-label">Our Commitment</p>
@@ -167,7 +215,6 @@
             </div>
 
             <div class="deserves-grid">
-
                 <article class="deserves-card safety-card">
                     <span class="deserves-number">01</span>
 
@@ -211,11 +258,13 @@
                         hope for a brighter future.
                     </p>
                 </article>
-
             </div>
         </section>
 
-        <!-- Closing Message -->
+
+        <!-- ====================================
+             CLOSING MESSAGE
+        ===================================== -->
         <section class="beneficiary-message">
             <div>
                 <p class="section-label">More Than A Home</p>
@@ -230,7 +279,10 @@
             </div>
         </section>
 
-        <!-- Call to Action -->
+
+        <!-- ====================================
+             CALL TO ACTION
+        ===================================== -->
         <section class="beneficiaries-cta">
             <div>
                 <p class="section-label">Make A Difference</p>
@@ -248,18 +300,23 @@
                 </p>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer -->
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
     <footer>
         <p>&copy; 2026 Tshinakaho Haven</p>
+
         <p>56 Mozart Lane, Sagewood, South Africa</p>
+
         <p>
-            <a href="tel:+27845630982">+27 84 563 0982</a>
+            <a href="tel:+27845630982">
+                +27 84 563 0982
+            </a>
         </p>
     </footer>
-
 </body>
 
 </html>
