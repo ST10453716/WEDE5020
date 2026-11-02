@@ -14,6 +14,12 @@ Tshinakaho Haven is a proposed non-profit children's home in Gauteng, South Afri
 - **Current Part:** Part 3 – Website Functionality, SEO and Testing
 - **Status:** Part 3 development and testing
 
+## Project Links
+
+**GitHub Repository:** https://github.com/ST10453716/WEDE5020
+
+**Live Website (GitHub Pages):** https://st10453716.github.io/WEDE5020/
+
 ## Website Pages
 
 The website consists of six main pages:
@@ -50,9 +56,7 @@ tshinakaho-haven/
 └── images/
 ```
 
-The SQLite database is created and used locally by the Python backend. It should not be committed to the public repository.
 
----
 
 # Part 1 – Website Foundation
 
