@@ -1,30 +1,35 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+    <!-- Home -->
     <url>
-        <loc>https://YOUR-DOMAIN.example/index.html</loc>
+        <loc>https://st10453716.github.io/WEDE5020/</loc>
     </url>
 
+    <!-- About Us -->
     <url>
-        <loc>https://YOUR-DOMAIN.example/about.html</loc>
+        <loc>https://st10453716.github.io/WEDE5020/about.html</loc>
     </url>
 
+    <!-- Services -->
     <url>
-        <loc>https://YOUR-DOMAIN.example/services.html</loc>
+        <loc>https://st10453716.github.io/WEDE5020/services.html</loc>
     </url>
 
+    <!-- Who We Help -->
     <url>
-        <loc>https://YOUR-DOMAIN.example/beneficiaries.html</loc>
+        <loc>https://st10453716.github.io/WEDE5020/beneficiaries.html</loc>
     </url>
 
+    <!-- Enquiry -->
     <url>
-        <loc>https://YOUR-DOMAIN.example/enquiry.html</loc>
+        <loc>https://st10453716.github.io/WEDE5020/enquiry.html</loc>
     </url>
 
+    <!-- Contact Us -->
     <url>
-        <loc>https://YOUR-DOMAIN.example/contact.html</loc>
+        <loc>https://st10453716.github.io/WEDE5020/contact.html</loc>
     </url>
 
 </urlset>
