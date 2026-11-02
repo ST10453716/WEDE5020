@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,22 +6,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- PART 3 - ON-PAGE SEO -->
+    <title>Contact Us &amp; Location | Tshinakaho Haven</title>
+
     <meta
         name="description"
-        content="Contact Tshinakaho Haven for more information about our proposed children's home, location and ways to get in touch."
+        content="Contact Tshinakaho Haven, a proposed children's home in South Africa. Find our contact details, explore our proposed Sagewood location and send a general message."
     >
 
-    <title>Contact Us | Tshinakaho Haven</title>
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Katlego Muofhe">
 
+    <!-- WEBSITE STYLESHEET -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- WEBSITE JAVASCRIPT -->
+    <script src="js/script.js" defer></script>
+
+    <!-- MAP STYLING -->
+    <style>
+        .contact-map {
+            width: 100%;
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #E8F0ED;
+        }
+
+        .contact-map iframe {
+            display: block;
+            width: 100%;
+            height: 420px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .contact-map iframe {
+                height: 320px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Header -->
+    <!-- HEADER AND NAVIGATION -->
     <header>
+
         <h1>Tshinakaho Haven</h1>
-        <p>A place where every child feels loved, safe and at home.</p>
+
+        <p>
+            A place where every child feels loved,
+            safe and at home.
+        </p>
 
         <nav aria-label="Main navigation">
             <ul>
@@ -29,173 +68,479 @@
                 <li><a href="services.html">Services</a></li>
                 <li><a href="beneficiaries.html">Who We Help</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li>
+                    <a href="contact.html" aria-current="page">
+                        Contact Us
+                    </a>
+                </li>
             </ul>
         </nav>
+
     </header>
 
-    <!-- Main Content -->
     <main>
 
-        <!-- Contact Hero -->
+        <!-- CONTACT HERO -->
         <section class="contact-hero">
-            <div class="contact-hero-content">
-                <p class="section-label">Contact Us</p>
 
-                <h2>We would love to hear from you.</h2>
+            <div class="contact-hero-content">
+
+                <p class="section-label">
+                    Contact Us
+                </p>
+
+                <h2>
+                    We would love to hear from you.
+                </h2>
 
                 <p>
-                    Get in touch with Tshinakaho Haven if you would like more
-                    information about our organisation, the children we aim to
+                    Get in touch with Tshinakaho Haven,
+                    a proposed non-profit children's home
+                    in South Africa, if you would like more
+                    information about our organisation,
+                    the vulnerable children we aim to
                     support or how you can become involved.
                 </p>
 
                 <p>
-                    Whether you are a community member, potential volunteer,
-                    donor, sponsor or organisation, we welcome the opportunity
-                    to connect with you.
+                    Whether you are a community member,
+                    potential volunteer, donor, sponsor
+                    or organisation, we welcome the
+                    opportunity to connect with you.
                 </p>
+
             </div>
 
             <div class="contact-hero-card">
-                <span class="contact-card-label">Let's Connect</span>
 
-                <h3>Have a question?</h3>
+                <span class="contact-card-label">
+                    Let's Connect
+                </span>
+
+                <h3>
+                    Have a question?
+                </h3>
 
                 <p>
-                    For volunteering, donations, sponsorships or partnerships,
+                    For volunteering, donations,
+                    sponsorships or partnerships,
                     you can also send us an enquiry.
                 </p>
 
-                <a href="enquiry.html">Send an Enquiry</a>
+                <a href="enquiry.html#enquiry-form">
+                    Send an Enquiry
+                </a>
+
             </div>
+
         </section>
 
-        <!-- Contact Details -->
+        <!-- CONTACT DETAILS -->
         <section class="contact-details-section">
-            <div class="section-heading">
-                <p class="section-label">Get In Touch</p>
 
-                <h2>Contact information</h2>
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Get In Touch
+                </p>
+
+                <h2>
+                    Contact information
+                </h2>
 
                 <p>
-                    Use the details below to contact or locate Tshinakaho Haven.
+                    Use the contact details below to
+                    learn more about Tshinakaho Haven
+                    and our proposed children's home.
                 </p>
+
             </div>
 
             <div class="contact-details-grid">
 
+                <!-- PHONE CARD -->
                 <article class="contact-info-card phone-card">
+
                     <span class="contact-number">01</span>
 
                     <h3>Call Us</h3>
 
                     <p>
-                        Speak to us directly if you would like more information
+                        Speak to us directly if you
+                        would like more information
                         about Tshinakaho Haven.
                     </p>
 
                     <a href="tel:+27845630982">
                         +27 84 563 0982
                     </a>
+
                 </article>
 
+                <!-- LOCATION CARD -->
                 <article class="contact-info-card location-card">
+
                     <span class="contact-number">02</span>
 
-                    <h3>Our Location</h3>
+                    <h3>Our Proposed Location</h3>
 
                     <address>
                         56 Mozart Lane<br>
                         Sagewood<br>
                         South Africa
                     </address>
+
+                    <p>
+                        This is a proposed address.
+                        The exact site location has
+                        not yet been verified.
+                    </p>
+
                 </article>
 
+                <!-- ENQUIRY CARD -->
                 <article class="contact-info-card enquiry-card">
+
                     <span class="contact-number">03</span>
 
                     <h3>Get Involved</h3>
 
                     <p>
-                        Interested in volunteering, donating, sponsoring or
+                        Interested in volunteering,
+                        donating, sponsoring or
                         partnering with Tshinakaho Haven?
                     </p>
 
-                    <a href="enquiry.html">
+                    <a href="enquiry.html#enquiry-form">
                         Make an Enquiry
                     </a>
+
                 </article>
 
             </div>
+
         </section>
 
-        <!-- Location Section -->
-        <section class="location-section">
-            <div class="location-content">
-                <p class="section-label">Find Us</p>
+        <!-- QUESTION 4 - GENERAL CONTACT FORM -->
+        <section
+            class="enquiry-form-section"
+            id="contact-form-section"
+        >
 
-                <h2>Our location</h2>
+            <div class="enquiry-form-intro">
+
+                <p class="section-label">
+                    Send A Message
+                </p>
+
+                <h2>
+                    How can we help you?
+                </h2>
 
                 <p>
-                    Tshinakaho Haven is located at 56 Mozart Lane, Sagewood,
-                    South Africa.
+                    Use this form for general questions,
+                    feedback or suggestions about
+                    Tshinakaho Haven. For volunteering,
+                    donations or sponsorships, please
+                    use our enquiry page.
+                </p>
+
+            </div>
+
+            <form
+                class="enquiry-form"
+                id="general-contact-form"
+                action="/api/contact"
+                method="post"
+                novalidate
+            >
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="contact-full-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="contact-full-name"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        minlength="2"
+                        maxlength="100"
+                        aria-describedby="contact-full-name-error"
+                        required
+                    >
+
+                    <small
+                        class="form-error"
+                        id="contact-full-name-error"
+                    ></small>
+
+                </div>
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="contact-email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="contact-email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        maxlength="254"
+                        aria-describedby="contact-email-error"
+                        required
+                    >
+
+                    <small
+                        class="form-error"
+                        id="contact-email-error"
+                    ></small>
+
+                </div>
+
+                <!-- PHONE -->
+                <div class="form-group">
+
+                    <label for="contact-phone">
+                        Phone Number (Optional)
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="contact-phone"
+                        name="phone"
+                        placeholder="e.g. 084 123 4567"
+                        autocomplete="tel"
+                        maxlength="20"
+                        aria-describedby="contact-phone-error"
+                    >
+
+                    <small
+                        class="form-error"
+                        id="contact-phone-error"
+                    ></small>
+
+                </div>
+
+                <!-- MESSAGE TYPE -->
+                <div class="form-group">
+
+                    <label for="contact-message-type">
+                        Message Type
+                    </label>
+
+                    <select
+                        id="contact-message-type"
+                        name="messageType"
+                        aria-describedby="contact-message-type-error"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            Select a message type
+                        </option>
+
+                        <option value="general">
+                            General Question
+                        </option>
+
+                        <option value="feedback">
+                            Feedback
+                        </option>
+
+                        <option value="suggestion">
+                            Suggestion
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        id="contact-message-type-error"
+                    ></small>
+
+                </div>
+
+                <!-- MESSAGE -->
+                <div class="form-group form-group-full">
+
+                    <label for="contact-message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        placeholder="Type your message here"
+                        minlength="10"
+                        maxlength="1000"
+                        rows="5"
+                        aria-describedby="contact-message-error"
+                        required
+                    ></textarea>
+
+                    <small
+                        class="form-error"
+                        id="contact-message-error"
+                    ></small>
+
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <div class="form-group form-group-full">
+
+                    <button type="submit">
+                        Submit Message
+                    </button>
+
+                </div>
+
+                <!-- FORM STATUS AND EMAIL LINK -->
+                <div class="form-group form-group-full">
+
+                    <p
+                        id="contact-form-status"
+                        class="form-status"
+                        role="status"
+                        aria-live="polite"
+                        aria-atomic="true"
+                    ></p>
+
+                    <a
+                        id="contact-email-link"
+                        class="primary-button"
+                        href="#contact-form-section"
+                        hidden
+                    >
+                        Open Prepared Email
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <!-- INTERACTIVE GOOGLE MAP -->
+        <section class="location-section">
+
+            <div class="location-content">
+
+                <p class="section-label">
+                    Find Us
+                </p>
+
+                <h2>
+                    Explore our proposed area
+                </h2>
+
+                <p>
+                    Tshinakaho Haven is a proposed
+                    children's home associated with
+                    the Sagewood area in South Africa.
                 </p>
 
                 <p>
-                    Use the map to view the location and plan your route.
+                    Use the interactive map to explore
+                    the broader Midrand area.
+                    You can zoom in, zoom out and
+                    move around the map.
+                </p>
+
+                <p>
+                    The map is illustrative and does
+                    not confirm the exact location
+                    of the proposed home.
                 </p>
 
                 <a
-                    href="https://www.google.com/maps/search/?api=1&query=56+Mozart+Lane+Sagewood+South+Africa"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Sagewood+Midrand+South+Africa"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Open in Google Maps
+                    Explore in Google Maps
                 </a>
+
             </div>
 
             <div class="contact-map">
+
                 <iframe
-                    src="https://www.google.com/maps?q=56+Mozart+Lane+Sagewood+South+Africa&output=embed"
-                    title="Map showing Tshinakaho Haven location"
+                    title="Interactive map of the broader Sagewood and Midrand area"
+                    src="https://www.google.com/maps?q=Sagewood%2C%20Midrand%2C%20South%20Africa&amp;output=embed"
+                    width="100%"
+                    height="420"
+                    style="border: 0; border-radius: 20px; display: block;"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
                 ></iframe>
+
             </div>
+
         </section>
 
-        <!-- Closing CTA -->
+        <!-- CLOSING CALL TO ACTION -->
         <section class="contact-cta">
+
             <div>
-                <p class="section-label">Together We Can Help</p>
 
-                <h2>Every connection can make a difference.</h2>
-
-                <p>
-                    Community support is important to the future of Tshinakaho
-                    Haven. Get in touch to learn more about how you can support
-                    our vision for vulnerable children.
+                <p class="section-label">
+                    Together We Can Help
                 </p>
 
-                <a href="enquiry.html">Get Involved</a>
+                <h2>
+                    Every connection can make a difference.
+                </h2>
+
+                <p>
+                    Community support is important
+                    to the future of Tshinakaho Haven.
+                    Get in touch to learn more about
+                    how you can support our vision
+                    for vulnerable children.
+                </p>
+
+                <a href="enquiry.html#enquiry-form">
+                    Get Involved
+                </a>
+
             </div>
+
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Tshinakaho Haven</p>
-        <p>56 Mozart Lane, Sagewood, South Africa</p>
+
+        <p>
+            &copy; 2026 Tshinakaho Haven
+        </p>
+
+        <p>
+            56 Mozart Lane, Sagewood, South Africa
+        </p>
 
         <p>
             <a href="tel:+27845630982">
                 +27 84 563 0982
             </a>
         </p>
+
     </footer>
 
 </body>
-
 </html>

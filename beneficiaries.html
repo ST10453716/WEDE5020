@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,78 +10,126 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <!-- ========================================
+         PART 3 - ON-PAGE SEO
+    ======================================== -->
+
+    <!-- SEO: Unique and descriptive page title -->
+    <title>Who We Help | Vulnerable Children | Tshinakaho Haven</title>
+
+    <!-- SEO: Meta description -->
     <meta
         name="description"
-        content="Learn about the children Tshinakaho Haven aims to support and the opportunities we hope to create for them."
+        content="Learn how Tshinakaho Haven aims to support orphaned and vulnerable children in South Africa through safe accommodation, education, emotional care and opportunities."
     >
 
-    <title>Who We Help | Tshinakaho Haven</title>
+    <!-- SEO: Search engine indexing -->
+    <meta name="robots" content="index, follow">
 
+    <!-- Website stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Website JavaScript -->
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
+
     <!-- ========================================
          HEADER AND NAVIGATION
-    ========================================= -->
+    ======================================== -->
+
     <header>
+
         <h1>Tshinakaho Haven</h1>
 
-        <p>A place where every child feels loved, safe and at home.</p>
+        <p>
+            A place where every child feels loved,
+            safe and at home.
+        </p>
 
         <nav aria-label="Main navigation">
+
             <ul>
                 <li>
                     <a href="index.html">Home</a>
                 </li>
+
                 <li>
                     <a href="about.html">About Us</a>
                 </li>
+
                 <li>
                     <a href="services.html">Services</a>
                 </li>
+
                 <li>
-                    <a href="beneficiaries.html" aria-current="page">Who We Help</a>
+                    <a
+                        href="beneficiaries.html"
+                        aria-current="page"
+                    >
+                        Who We Help
+                    </a>
                 </li>
+
                 <li>
                     <a href="enquiry.html">Enquiry</a>
                 </li>
+
                 <li>
                     <a href="contact.html">Contact Us</a>
                 </li>
             </ul>
+
         </nav>
+
     </header>
 
 
     <!-- ========================================
          MAIN CONTENT
-    ========================================= -->
+    ======================================== -->
+
     <main>
 
-        <!-- ====================================
+        <!-- ========================================
              HERO SECTION
-        ===================================== -->
-        <section class="beneficiaries-hero">
-            <div class="beneficiaries-hero-content">
-                <p class="section-label">Who We Help</p>
+        ======================================== -->
 
-                <h2>Every child deserves a place to belong.</h2>
+        <section class="beneficiaries-hero">
+
+            <div class="beneficiaries-hero-content">
+
+                <p class="section-label">
+                    Who We Help
+                </p>
+
+                <h2>
+                    Every child deserves a place to belong.
+                </h2>
 
                 <p>
-                    Tshinakaho Haven aims to support orphaned and vulnerable
-                    children who need a safe, caring and supportive environment.
+                    Tshinakaho Haven is a proposed non-profit
+                    children's home in South Africa that aims
+                    to support orphaned and vulnerable children
+                    who need a safe, caring and stable environment.
                 </p>
 
                 <p>
-                    We believe that difficult circumstances should not prevent
-                    a child from feeling loved, receiving an education or having
+                    We believe that difficult circumstances
+                    should not prevent a child from feeling
+                    loved, receiving an education or having
                     opportunities for a brighter future.
                 </p>
+
             </div>
 
+
+            <!-- SEO: Responsive hero image -->
             <div class="beneficiaries-hero-image">
+
                 <picture>
+
                     <source
                         media="(max-width: 600px)"
                         srcset="images/children-playing-480.jpg"
@@ -99,224 +148,374 @@
                             images/children-playing.jpg 1365w
                         "
                         sizes="(max-width: 600px) 92vw, (max-width: 899px) 90vw, 42vw"
-                        alt="Children playing together outdoors"
+                        alt="Children playing together outdoors in a supportive community environment"
+                        fetchpriority="high"
+                        decoding="async"
                     >
+
                 </picture>
+
             </div>
+
         </section>
 
 
-        <!-- ====================================
+        <!-- ========================================
              WHO WE SUPPORT
-        ===================================== -->
-        <section class="who-we-support">
-            <div class="section-heading">
-                <p class="section-label">Our Beneficiaries</p>
+        ======================================== -->
 
-                <h2>Supporting children who need care</h2>
+        <section class="who-we-support">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Our Beneficiaries
+                </p>
+
+                <h2>
+                    Supporting children who need care
+                </h2>
 
                 <p>
-                    Children may require additional care and support for many
-                    different reasons. Tshinakaho Haven aims to provide a stable
-                    environment where vulnerable children can feel safe, valued
-                    and supported.
+                    Children may require additional care
+                    and support for many different reasons.
+                    Tshinakaho Haven aims to provide a stable
+                    environment where vulnerable children
+                    can feel safe, valued and supported.
                 </p>
+
             </div>
+
 
             <div class="beneficiary-intro">
+
                 <p>
-                    Our focus is not only on providing children with a place to
-                    stay. We aim to create an environment that supports their
-                    wellbeing, education, development and sense of belonging.
+                    Our focus is not only on providing
+                    children with a place to stay.
+                    We aim to create an environment that
+                    supports their wellbeing, education,
+                    development and sense of belonging.
                 </p>
+
+                <!-- SEO: Internal link to Services -->
+                <p>
+                    Learn more about the care and support
+                    we aim to provide on our
+                    <a href="services.html">
+                        Children's Home Services
+                    </a>
+                    page.
+                </p>
+
             </div>
+
         </section>
 
 
-        <!-- ====================================
+        <!-- ========================================
              CIRCUMSTANCES SECTION
-        ===================================== -->
-        <section class="circumstances-section">
-            <div class="section-heading">
-                <p class="section-label">When Support May Be Needed</p>
+        ======================================== -->
 
-                <h2>Every child's circumstances are different</h2>
+        <section class="circumstances-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    When Support May Be Needed
+                </p>
+
+                <h2>
+                    Every child's circumstances are different
+                </h2>
 
                 <p>
-                    Tshinakaho Haven aims to support children who may be
-                    experiencing circumstances that affect their access to a
-                    safe and stable home.
+                    Tshinakaho Haven aims to support children
+                    who may be experiencing circumstances
+                    that affect their access to a safe
+                    and stable home.
                 </p>
+
             </div>
+
 
             <div class="circumstances-grid">
-                <article class="circumstance-card">
-                    <span class="circumstance-number">01</span>
 
-                    <h3>Loss of Parental Care</h3>
+                <!-- CIRCUMSTANCE 1 -->
+                <article class="circumstance-card">
+
+                    <span class="circumstance-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Loss of Parental Care
+                    </h3>
 
                     <p>
-                        Children who have lost one or both parents may need
-                        additional care, stability and emotional support.
+                        Children who have lost one or both
+                        parents may need additional care,
+                        stability and emotional support.
                     </p>
+
                 </article>
 
-                <article class="circumstance-card">
-                    <span class="circumstance-number">02</span>
 
-                    <h3>Unstable Home Environments</h3>
+                <!-- CIRCUMSTANCE 2 -->
+                <article class="circumstance-card">
+
+                    <span class="circumstance-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Unstable Home Environments
+                    </h3>
 
                     <p>
-                        Some children may experience home circumstances that do
-                        not provide the stability and support they need.
+                        Some children may experience home
+                        circumstances that do not provide
+                        the stability and support they need.
                     </p>
+
                 </article>
 
-                <article class="circumstance-card">
-                    <span class="circumstance-number">03</span>
 
-                    <h3>Difficult Circumstances</h3>
+                <!-- CIRCUMSTANCE 3 -->
+                <article class="circumstance-card">
+
+                    <span class="circumstance-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Difficult Circumstances
+                    </h3>
 
                     <p>
-                        Social and family challenges can affect a child's
-                        wellbeing, education and development.
+                        Social and family challenges can
+                        affect a child's wellbeing,
+                        education and development.
                     </p>
+
                 </article>
 
-                <article class="circumstance-card">
-                    <span class="circumstance-number">04</span>
 
-                    <h3>Need for Alternative Care</h3>
+                <!-- CIRCUMSTANCE 4 -->
+                <article class="circumstance-card">
+
+                    <span class="circumstance-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Need for Alternative Care
+                    </h3>
 
                     <p>
-                        Some children may require a safe and supportive
-                        alternative care environment where their everyday needs
-                        can be met.
+                        Some children may require a safe
+                        and supportive alternative care
+                        environment where their everyday
+                        needs can be met.
                     </p>
+
                 </article>
+
             </div>
+
         </section>
 
 
-        <!-- ====================================
+        <!-- ========================================
              WHAT EVERY CHILD DESERVES
-        ===================================== -->
-        <section class="child-deserves-section">
-            <div class="section-heading">
-                <p class="section-label">Our Commitment</p>
+        ======================================== -->
 
-                <h2>What every child deserves</h2>
+        <section class="child-deserves-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Our Commitment
+                </p>
+
+                <h2>
+                    What every child deserves
+                </h2>
 
                 <p>
-                    Regardless of their circumstances, we believe every child
-                    should have the foundation they need to grow and build
-                    their future.
+                    Regardless of their circumstances,
+                    we believe every child should have
+                    the foundation they need to grow
+                    and build their future.
                 </p>
+
             </div>
 
+
             <div class="deserves-grid">
+
+                <!-- SAFETY -->
                 <article class="deserves-card safety-card">
-                    <span class="deserves-number">01</span>
+
+                    <span class="deserves-number">
+                        01
+                    </span>
 
                     <h3>Safety</h3>
 
                     <p>
-                        A secure and stable environment where a child can feel
-                        protected and cared for.
+                        A secure and stable environment
+                        where a child can feel protected
+                        and cared for.
                     </p>
+
                 </article>
 
+
+                <!-- BELONGING -->
                 <article class="deserves-card belonging-card">
-                    <span class="deserves-number">02</span>
+
+                    <span class="deserves-number">
+                        02
+                    </span>
 
                     <h3>Belonging</h3>
 
                     <p>
-                        A caring community where children feel accepted, valued
-                        and part of a family.
+                        A caring community where children
+                        feel accepted, valued and part
+                        of a family.
                     </p>
+
                 </article>
 
+
+                <!-- EDUCATION -->
                 <article class="deserves-card education-card">
-                    <span class="deserves-number">03</span>
+
+                    <span class="deserves-number">
+                        03
+                    </span>
 
                     <h3>Education</h3>
 
                     <p>
-                        Access to learning, encouragement and support to help
-                        children develop their abilities.
+                        Access to learning, encouragement
+                        and support to help children
+                        develop their abilities.
                     </p>
+
                 </article>
 
+
+                <!-- OPPORTUNITY -->
                 <article class="deserves-card opportunity-card">
-                    <span class="deserves-number">04</span>
+
+                    <span class="deserves-number">
+                        04
+                    </span>
 
                     <h3>Opportunity</h3>
 
                     <p>
-                        The opportunity to develop confidence, life skills and
-                        hope for a brighter future.
+                        The opportunity to develop
+                        confidence, life skills and hope
+                        for a brighter future.
                     </p>
+
                 </article>
+
             </div>
+
         </section>
 
 
-        <!-- ====================================
+        <!-- ========================================
              CLOSING MESSAGE
-        ===================================== -->
+        ======================================== -->
+
         <section class="beneficiary-message">
-            <div>
-                <p class="section-label">More Than A Home</p>
 
-                <h2>A child's circumstances should not define their future.</h2>
+            <div>
+
+                <p class="section-label">
+                    More Than A Home
+                </p>
+
+                <h2>
+                    A child's circumstances should not
+                    define their future.
+                </h2>
 
                 <p>
-                    Tshinakaho Haven aims to give children the care, support and
-                    opportunities they need to grow into confident and
-                    independent individuals.
+                    Tshinakaho Haven aims to give children
+                    the care, support and opportunities
+                    they need to grow into confident
+                    and independent individuals.
                 </p>
+
             </div>
+
         </section>
 
 
-        <!-- ====================================
+        <!-- ========================================
              CALL TO ACTION
-        ===================================== -->
+        ======================================== -->
+
         <section class="beneficiaries-cta">
+
             <div>
-                <p class="section-label">Make A Difference</p>
 
-                <h2>Help us create brighter futures.</h2>
+                <p class="section-label">
+                    Make A Difference
+                </p>
+
+                <h2>
+                    Help us create brighter futures.
+                </h2>
 
                 <p>
-                    Community members, volunteers, donors, sponsors and
-                    organisations can play an important role in supporting the
-                    children Tshinakaho Haven aims to serve.
+                    Community members, volunteers,
+                    donors, sponsors and organisations
+                    can play an important role in
+                    supporting the children Tshinakaho
+                    Haven aims to serve.
                 </p>
 
                 <p>
-                    <a href="enquiry.html">Get Involved</a>
+                    <a href="enquiry.html">
+                        Get Involved
+                    </a>
                 </p>
+
             </div>
+
         </section>
+
     </main>
 
 
     <!-- ========================================
          FOOTER
-    ========================================= -->
-    <footer>
-        <p>&copy; 2026 Tshinakaho Haven</p>
+    ======================================== -->
 
-        <p>56 Mozart Lane, Sagewood, South Africa</p>
+    <footer>
+
+        <p>
+            &copy; 2026 Tshinakaho Haven
+        </p>
+
+        <p>
+            56 Mozart Lane, Sagewood, South Africa
+        </p>
 
         <p>
             <a href="tel:+27845630982">
                 +27 84 563 0982
             </a>
         </p>
-    </footer>
-</body>
 
+    </footer>
+
+</body>
 </html>

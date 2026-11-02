@@ -1,80 +1,325 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
+    <title>Tshinakaho Haven | Children's Home in South Africa</title>
+
     <meta
         name="description"
-        content="Tshinakaho Haven is a proposed non-profit children's home providing a safe, caring and supportive environment for orphaned and vulnerable children."
+        content="Discover Tshinakaho Haven, a proposed non-profit children's home in South Africa focused on safe accommodation, education, nutrition and care for vulnerable children."
     >
 
-    <title>Tshinakaho Haven | Children's Home</title>
+    <meta name="robots" content="index, follow">
 
+    <!-- Website stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Existing website JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Homepage-specific styles -->
+    <style>
+        /* HERO IMAGE */
+
+        .hero-image {
+            width: 100%;
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 22px;
+        }
+
+        .hero-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        /* MAP CONTAINER */
+
+        .home-map {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-width: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #FFFFFF;
+        }
+
+        /* MAP PLACEHOLDER */
+
+        .map-placeholder {
+            min-height: 420px;
+            padding: 35px;
+            box-sizing: border-box;
+            background: #E8F0ED;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .map-placeholder[hidden] {
+            display: none;
+        }
+
+        .map-placeholder h3 {
+            margin: 0;
+            color: #14324B;
+        }
+
+        .map-placeholder p {
+            max-width: 350px;
+            margin: 0;
+        }
+
+        .map-placeholder button {
+            cursor: pointer;
+            font: inherit;
+            border: none;
+        }
+
+        /* INTERACTIVE MAP */
+
+        .google-map-container[hidden] {
+            display: none;
+        }
+
+        .google-map-container iframe {
+            display: block;
+            width: 100%;
+            height: 420px;
+            border: 0;
+        }
+
+        /* MAP FOOTER */
+
+        .home-map .map-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 22px 24px;
+            background: #FFFFFF;
+        }
+
+        .map-footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .map-footer-label {
+            color: #24A096;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .map-footer-address {
+            color: #14324B;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* GOOGLE MAPS BUTTON */
+
+        .home-map .map-external-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 0;
+            padding: 13px 20px;
+            border-radius: 30px;
+            background: #14324B;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .home-map .map-external-link:hover {
+            background: #24A096;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        .home-map .map-external-link:focus-visible {
+            outline: 3px solid #F5BE42;
+            outline-offset: 3px;
+        }
+
+        .home-map .map-external-link svg {
+            flex-shrink: 0;
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 600px) {
+            .hero-image img {
+                height: 300px;
+                min-height: 300px;
+            }
+
+            .map-placeholder {
+                min-height: 320px;
+                padding: 24px;
+            }
+
+            .google-map-container iframe {
+                height: 320px;
+            }
+
+            .home-map .map-footer {
+                padding: 20px;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .home-map .map-external-link {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .home-map .map-external-link {
+                transition: none;
+            }
+        }
+    </style>
+
+    <!-- Load Google Maps only after the visitor clicks -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loadMapButton = document.getElementById("load-google-map");
+            const mapContainer = document.getElementById("google-map-container");
+            const mapPlaceholder = document.getElementById("map-placeholder");
+
+            if (!loadMapButton || !mapContainer || !mapPlaceholder) {
+                return;
+            }
+
+            loadMapButton.addEventListener("click", function () {
+
+                if (mapContainer.querySelector("iframe")) {
+                    return;
+                }
+
+                const mapFrame = document.createElement("iframe");
+
+                mapFrame.title =
+                    "Interactive map of the broader Sagewood and Midrand area";
+
+                mapFrame.src =
+                    "https://www.google.com/maps?q=Sagewood%2C%20Midrand%2C%20South%20Africa&output=embed";
+
+                mapFrame.width = "100%";
+                mapFrame.height = "420";
+                mapFrame.loading = "eager";
+                mapFrame.referrerPolicy = "no-referrer-when-downgrade";
+                mapFrame.allowFullscreen = true;
+
+                mapContainer.appendChild(mapFrame);
+
+                mapContainer.hidden = false;
+                mapPlaceholder.hidden = true;
+
+                loadMapButton.setAttribute("aria-expanded", "true");
+                mapFrame.focus();
+
+            });
+
+        });
+    </script>
+
 </head>
 
 <body>
-    <!-- ========================================
-         HEADER AND NAVIGATION
-    ========================================= -->
+
+    <!-- HEADER AND NAVIGATION -->
     <header>
+
         <h1>Tshinakaho Haven</h1>
 
-        <p>A place where every child feels loved, safe and at home.</p>
+        <p>
+            A place where every child feels loved, safe and at home.
+        </p>
 
         <nav aria-label="Main navigation">
             <ul>
                 <li>
                     <a href="index.html" aria-current="page">Home</a>
                 </li>
+
                 <li>
                     <a href="about.html">About Us</a>
                 </li>
+
                 <li>
                     <a href="services.html">Services</a>
                 </li>
+
                 <li>
                     <a href="beneficiaries.html">Who We Help</a>
                 </li>
+
                 <li>
                     <a href="enquiry.html">Enquiry</a>
                 </li>
+
                 <li>
                     <a href="contact.html">Contact Us</a>
                 </li>
             </ul>
         </nav>
+
     </header>
 
-
-    <!-- ========================================
-         MAIN CONTENT
-    ========================================= -->
     <main>
 
-        <!-- Hero Section -->
+        <!-- HERO SECTION -->
         <section class="hero">
-            <div class="hero-content">
-                <p class="section-label">A Safe Place To Belong</p>
 
-                <p>
-                    Tshinakaho Haven is a proposed non-profit children's home
-                    dedicated to providing a safe, caring and supportive
-                    environment for orphaned and vulnerable children.
+            <div class="hero-content">
+
+                <p class="section-label">
+                    A Safe Place To Belong
                 </p>
 
                 <p>
-                    Our aim is to create a family-like home where children feel
-                    loved, respected, valued and supported as they grow.
+                    Tshinakaho Haven is a proposed non-profit children's
+                    home in South Africa dedicated to providing a safe,
+                    caring and supportive environment for orphaned and
+                    vulnerable children.
+                </p>
+
+                <p>
+                    Our aim is to create a family-like home where children
+                    feel loved, respected, valued and supported as they grow.
                 </p>
 
                 <div class="hero-actions">
+
                     <a
                         href="about.html"
                         class="primary-button"
                     >
-                        Learn More
+                        About Tshinakaho Haven
                     </a>
 
                     <a
@@ -83,51 +328,47 @@
                     >
                         Get Involved
                     </a>
+
                 </div>
+
             </div>
 
             <div class="hero-image">
-                <picture>
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="images/hero-diverse-children-480.jpg"
-                    >
 
-                    <source
-                        media="(max-width: 899px)"
-                        srcset="images/hero-diverse-children-800.jpg"
-                    >
+                <img
+                    src="images/hero-diverse-children-480.jpg"
+                    alt="Group of children spending time together outdoors"
+                    fetchpriority="high"
+                    decoding="async"
+                    width="800"
+                    height="600"
+                >
 
-                    <img
-                        src="images/hero-diverse-children.jpg"
-                        srcset="
-                            images/hero-diverse-children-480.jpg 480w,
-                            images/hero-diverse-children-800.jpg 800w,
-                            images/hero-diverse-children.jpg 2048w
-                        "
-                        sizes="(max-width: 600px) 92vw, (max-width: 899px) 90vw, 42vw"
-                        alt="Children spending time together outdoors"
-                    >
-                </picture>
             </div>
+
         </section>
 
-
-        <!-- ========================================
-             OUR PURPOSE
-        ========================================= -->
+        <!-- OUR PURPOSE -->
         <section class="home-about">
-            <div class="section-heading">
-                <p class="section-label">Our Purpose</p>
 
-                <h2>Creating a safe and supportive home.</h2>
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Our Purpose
+                </p>
+
+                <h2>
+                    Creating a safe and supportive home.
+                </h2>
 
                 <p>
-                    Tshinakaho Haven aims to provide more than accommodation.
-                    We want to create an environment where children receive the
-                    care, support and opportunities they need to develop
+                    Tshinakaho Haven aims to provide more than
+                    accommodation. We want to create an environment
+                    where vulnerable children receive the care,
+                    support and opportunities they need to develop
                     physically, emotionally, socially and academically.
                 </p>
+
             </div>
 
             <a
@@ -136,114 +377,135 @@
             >
                 About Tshinakaho Haven
             </a>
+
         </section>
 
-
-        <!-- ========================================
-             SERVICES PREVIEW
-        ========================================= -->
+        <!-- SERVICES PREVIEW -->
         <section class="services-preview">
-            <div class="section-heading">
-                <p class="section-label">What We Provide</p>
 
-                <h2>Supporting every part of a child's development.</h2>
+            <div class="section-heading">
+
+                <p class="section-label">
+                    What We Provide
+                </p>
+
+                <h2>
+                    Supporting every part of a child's development.
+                </h2>
 
                 <p>
-                    Our proposed services focus on creating a stable environment
-                    where children can feel safe, continue their education and
-                    develop the skills they need for the future.
+                    Our proposed children's home services focus on
+                    creating a stable environment where children can
+                    feel safe, continue their education and develop
+                    the skills they need for the future.
                 </p>
+
             </div>
 
             <div class="service-grid">
+
                 <article>
                     <h3>Safe Accommodation</h3>
-
                     <p>
-                        A stable, comfortable and caring place where children
-                        can feel protected and at home.
+                        A stable, comfortable and caring place where
+                        children can feel protected and at home.
                     </p>
                 </article>
 
                 <article>
                     <h3>Food &amp; Nutrition</h3>
-
                     <p>
-                        Nutritious meals that support children's health,
-                        wellbeing and development.
+                        Nutritious meals that support children's
+                        health, wellbeing and development.
                     </p>
                 </article>
 
                 <article>
                     <h3>Educational Support</h3>
-
                     <p>
-                        Homework assistance, school supplies, learning
-                        resources and a suitable environment for studying.
+                        Homework assistance, school supplies,
+                        learning resources and a suitable
+                        environment for studying.
                     </p>
                 </article>
 
                 <article>
                     <h3>Personal Care</h3>
-
                     <p>
-                        Clothing and everyday personal care essentials that
-                        promote dignity and wellbeing.
+                        Clothing and everyday personal care
+                        essentials that promote dignity
+                        and wellbeing.
                     </p>
                 </article>
 
                 <article>
                     <h3>Emotional Support</h3>
-
                     <p>
-                        A caring environment where children feel heard,
-                        respected, valued and supported.
+                        A caring environment where children feel
+                        heard, respected, valued and supported.
                     </p>
                 </article>
 
                 <article>
                     <h3>Life Skills</h3>
-
                     <p>
-                        Opportunities to build confidence, relationships and
-                        practical skills for greater independence.
+                        Opportunities to build confidence,
+                        relationships and practical skills
+                        for greater independence.
                     </p>
                 </article>
+
             </div>
+
+            <a
+                href="services.html"
+                class="primary-button"
+            >
+                Explore Our Services
+            </a>
+
         </section>
 
-
-        <!-- ========================================
-             GET INVOLVED
-        ========================================= -->
+        <!-- GET INVOLVED -->
         <section class="get-involved">
-            <div>
-                <p class="section-label">Make A Difference</p>
 
-                <h2>Help us build a brighter future for children.</h2>
+            <div>
+
+                <p class="section-label">
+                    Make A Difference
+                </p>
+
+                <h2>
+                    Help us build a brighter future for children.
+                </h2>
 
                 <p>
-                    Tshinakaho Haven will depend on the support of individuals,
-                    volunteers, donors, sponsors and community partners who
-                    share our vision of creating a safe and supportive home for
-                    vulnerable children.
+                    Tshinakaho Haven will depend on the support of
+                    individuals, volunteers, donors, sponsors and
+                    community partners who share our vision of creating
+                    a safe and supportive home for vulnerable children.
                 </p>
 
                 <a href="enquiry.html">
                     Find out how you can get involved
                 </a>
+
             </div>
+
         </section>
 
-
-        <!-- ========================================
-             CONTACT AND LOCATION
-        ========================================= -->
+        <!-- CONTACT AND LOCATION -->
         <section class="home-contact">
-            <div class="home-contact-details">
-                <p class="section-label">Contact &amp; Location</p>
 
-                <h2>Come and connect with us.</h2>
+            <div class="home-contact-details">
+
+                <p class="section-label">
+                    Contact &amp; Location
+                </p>
+
+                <h2>
+                    Come and connect with us.
+                </h2>
 
                 <p class="contact-intro">
                     If you would like more information about Tshinakaho Haven,
@@ -252,14 +514,17 @@
                 </p>
 
                 <div class="home-contact-item">
+
                     <span>Phone</span>
 
                     <a href="tel:+27845630982">
                         +27 84 563 0982
                     </a>
+
                 </div>
 
                 <div class="home-contact-item">
+
                     <span>Address</span>
 
                     <address>
@@ -267,6 +532,7 @@
                         Sagewood<br>
                         South Africa
                     </address>
+
                 </div>
 
                 <a
@@ -275,33 +541,180 @@
                 >
                     View Contact Details
                 </a>
+
             </div>
 
+            <!-- GOOGLE MAP -->
             <div class="home-map">
-                <iframe
-                    src="https://www.google.com/maps?q=56+Mozart+Lane+Sagewood+South+Africa&output=embed"
-                    title="Map showing Tshinakaho Haven location"
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
 
-                <div class="map-address">
-                    <span>Our Location</span>
+                <!-- Shown before the map loads -->
+                <div
+                    id="map-placeholder"
+                    class="map-placeholder"
+                >
 
-                    <strong>
-                        56 Mozart Lane, Sagewood
-                    </strong>
+                    <h3>Explore Our Location</h3>
+
+                    <p>
+                        View the broader Sagewood and Midrand area
+                        using our interactive Google Map.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="load-google-map"
+                        class="primary-button"
+                        aria-controls="google-map-container"
+                        aria-expanded="false"
+                    >
+                        View Interactive Map
+                    </button>
+
                 </div>
+
+                <!-- Map loads here after clicking -->
+                <div
+                    id="google-map-container"
+                    class="google-map-container"
+                    hidden
+                ></div>
+
+                <!-- Improved map footer -->
+                <div class="map-footer">
+
+                    <div class="map-footer-info">
+
+                        <span class="map-footer-label">
+                            OUR LOCATION
+                        </span>
+
+                        <span class="map-footer-address">
+                            Sagewood, Midrand, South Africa
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&amp;query=Sagewood+Midrand+South+Africa"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-external-link"
+                        aria-label="Open the broader Sagewood area in Google Maps, in a new tab"
+                    >
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                        >
+                            <path d="M15 3h6v6"/>
+                            <path d="M10 14 21 3"/>
+                            <path d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"/>
+                        </svg>
+
+                        Open in Google Maps
+
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
+
+        <!-- SOCIAL MEDIA SHARING -->
+        <section
+            class="social-sharing-section"
+            aria-labelledby="social-sharing-heading"
+        >
+
+            <div class="social-sharing-content">
+
+                <p class="section-label">
+                    Spread The Word
+                </p>
+
+                <h2 id="social-sharing-heading">
+                    Help us share our vision.
+                </h2>
+
+                <p>
+                    Share Tshinakaho Haven with friends, family
+                    and community members to raise awareness
+                    about our proposed children's home.
+                </p>
+
+                <div class="social-sharing-links">
+
+                    <!-- WHATSAPP -->
+                    <a
+                        id="share-whatsapp"
+                        class="social-icon whatsapp-icon"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share Tshinakaho Haven on WhatsApp"
+                        title="Share on WhatsApp"
+                    >
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M20.52 3.48A11.87 11.87 0 0 0 12.05 0C5.45 0 .07 5.37.06 11.97c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.93 11.93 0 0 0 5.84 1.49h.01c6.6 0 11.98-5.37 11.99-11.97a11.9 11.9 0 0 0-3.52-8.41ZM12.05 21.84a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.73.98.99-3.64-.24-.37a9.83 9.83 0 0 1-1.51-5.26c0-5.44 4.43-9.87 9.88-9.87a9.8 9.8 0 0 1 6.99 2.9 9.8 9.8 0 0 1 2.89 7c-.01 5.44-4.44 9.86-9.89 9.86Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+                        </svg>
+
+                    </a>
+
+                    <!-- FACEBOOK -->
+                    <a
+                        id="share-facebook"
+                        class="social-icon facebook-icon"
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Share Tshinakaho Haven on Facebook"
+                        title="Share on Facebook"
+                    >
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
 
-
-    <!-- ========================================
-         FOOTER
-    ========================================= -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Tshinakaho Haven</p>
+
+        <p>
+            &copy; 2026 Tshinakaho Haven
+        </p>
 
         <p>
             56 Mozart Lane, Sagewood, South Africa
@@ -312,6 +725,8 @@
                 +27 84 563 0982
             </a>
         </p>
+
     </footer>
+
 </body>
 </html>
