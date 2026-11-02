@@ -6,35 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ========================================
-         SEO - PAGE TITLE
-    ======================================== -->
     <title>Children's Home Services | Tshinakaho Haven</title>
 
-    <!-- ========================================
-         SEO - META DESCRIPTION
-    ======================================== -->
     <meta
         name="description"
         content="Explore Tshinakaho Haven's planned children's home services, including safe accommodation, nutrition, educational support, emotional care and life skills."
     >
 
-    <!-- SEO - SEARCH ENGINE INDEXING -->
     <meta name="robots" content="index, follow">
 
-    <!-- WEBSITE STYLESHEET -->
-  <link rel="stylesheet" href="css/style.css?v=4">
-
-    <!-- WEBSITE JAVASCRIPT -->
+    <link rel="stylesheet" href="css/style.css?v=4">
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- ========================================
-         HEADER AND NAVIGATION
-    ======================================== -->
-
+    <!-- HEADER AND NAVIGATION -->
     <header>
         <h1>Tshinakaho Haven</h1>
 
@@ -45,53 +32,27 @@
 
         <nav aria-label="Main navigation">
             <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li>
                     <a href="services.html" aria-current="page">
                         Services
                     </a>
                 </li>
-
-                <li>
-                    <a href="beneficiaries.html">Who We Help</a>
-                </li>
-
-                <li>
-                    <a href="enquiry.html">Enquiry</a>
-                </li>
-
-                <li>
-                    <a href="contact.html">Contact Us</a>
-                </li>
+                <li><a href="beneficiaries.html">Who We Help</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <!-- ========================================
-         MAIN CONTENT
-    ======================================== -->
-
     <main>
 
-        <!-- ========================================
-             SERVICES HERO
-        ======================================== -->
-
+        <!-- SERVICES HERO -->
         <section class="services-hero">
 
             <div class="services-hero-content">
-
-                <p class="section-label">
-                    Our Services
-                </p>
+                <p class="section-label">Our Services</p>
 
                 <h2>
                     Children's home services that support
@@ -111,59 +72,30 @@
                     to give children the support and opportunities
                     they need to grow with confidence.
                 </p>
-
             </div>
 
-
-            <!-- SEO - RESPONSIVE HERO IMAGE -->
             <div class="services-hero-image">
-
-                <picture>
-
-                    <source
-                        media="(max-width: 600px)"
-                        srcset="images/education-support-480.jpg"
-                    >
-
-                    <source
-                        media="(max-width: 899px)"
-                        srcset="images/education-support-800.jpg"
-                    >
-
-                    <img
-                        src="images/education-support.jpg"
-                        alt="Children participating in educational activities and receiving learning support"
-                        fetchpriority="high"
-                        decoding="async"
-                    >
-
-                </picture>
-
+                <img
+                    src="images/education-support-480.jpg"
+                    alt="Children participating in educational activities and receiving learning support"
+                    fetchpriority="high"
+                    decoding="async"
+                >
             </div>
 
         </section>
 
-
-        <!-- ========================================
-             PART 3 - DYNAMIC SERVICES
-        ======================================== -->
-
+        <!-- DYNAMIC SERVICES -->
         <section
             class="services-page-section"
             id="services-results"
             aria-label="Our services"
         >
 
-            <!-- SECTION INTRODUCTION -->
             <div class="section-heading">
+                <p class="section-label">WHAT WE PROVIDE</p>
 
-                <p class="section-label">
-                    WHAT WE PROVIDE
-                </p>
-
-                <h2>
-                    Care that goes beyond providing a home
-                </h2>
+                <h2>Care that goes beyond providing a home</h2>
 
                 <p>
                     Our planned services focus on creating a
@@ -171,99 +103,79 @@
                     feel safe, continue their education, develop
                     important life skills and enjoy their childhood.
                 </p>
-
             </div>
 
+            <!-- SEARCH AND SORT -->
+            <div class="services-tools">
 
-          
-<!-- SEARCH AND SORT -->
-<div class="services-tools">
+                <div class="services-tools-heading">
+                    <span
+                        class="services-tools-icon"
+                        aria-hidden="true"
+                    >⌕</span>
 
-    <div class="services-tools-heading">
-        <span class="services-tools-icon" aria-hidden="true">⌕</span>
+                    <div>
+                        <h3>Find a Service</h3>
+                        <p>Search and explore our planned support services.</p>
+                    </div>
+                </div>
 
-        <div>
-            <h3>Find a Service</h3>
-            <p>Search and explore our planned support services.</p>
-        </div>
-    </div>
+                <div class="services-tools-controls">
 
-    <div class="services-tools-controls">
+                    <form
+                        id="services-search-form"
+                        class="services-search-box"
+                        role="search"
+                    >
+                        <label for="service-search">
+                            Search Services
+                        </label>
 
-        <!-- SEARCH SERVICES -->
-        <form
-            id="services-search-form"
-            class="services-search-box"
-            role="search"
-        >
-            <label for="service-search">
-                Search Services
-            </label>
+                        <div class="services-search-input-row">
+                            <input
+                                type="search"
+                                id="service-search"
+                                placeholder="Search our services..."
+                                autocomplete="off"
+                            >
 
-            <div class="services-search-input-row">
-                <input
-                    type="search"
-                    id="service-search"
-                    placeholder="Search our services..."
-                    autocomplete="off"
-                >
+                            <button
+                                type="submit"
+                                id="service-search-button"
+                            >
+                                Search
+                            </button>
+                        </div>
+                    </form>
 
-                <button
-                    type="submit"
-                    id="service-search-button"
-                >
-                    Search
-                </button>
+                    <div class="services-sort-group">
+                        <label for="service-sort">Sort by</label>
+
+                        <select id="service-sort">
+                            <option value="default">Original Order</option>
+                            <option value="az">Name: A–Z</option>
+                            <option value="za">Name: Z–A</option>
+                        </select>
+                    </div>
+
+                </div>
             </div>
-        </form>
 
-        <!-- SORT SERVICES -->
-        <div class="services-sort-group">
-
-            <label for="service-sort">
-                Sort by
-            </label>
-
-            <select id="service-sort">
-                <option value="default">Original Order</option>
-                <option value="az">Name: A–Z</option>
-                <option value="za">Name: Z–A</option>
-            </select>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-            <!-- ========================================
-                 SEARCH RESULTS COUNT
-            ======================================== -->
-
+            <!-- SEARCH RESULT COUNT -->
             <p
                 id="services-result-count"
                 role="status"
                 aria-live="polite"
             ></p>
 
-
-            <!-- ========================================
-                 DYNAMIC SERVICE CARDS
-            ======================================== -->
-
+            <!-- DYNAMIC SERVICE CARDS -->
             <div
                 class="service-card-deck"
                 id="dynamic-services"
             >
-                <!--
-                    Service cards are generated dynamically
-                    using JavaScript in js/script.js.
-                -->
+                <!-- Generated by js/script.js -->
             </div>
 
-
-            <!-- NO MATCHING RESULTS -->
             <p id="services-empty" hidden>
                 No services match your search.
                 Try another keyword.
@@ -271,22 +183,13 @@
 
         </section>
 
-
-        <!-- ========================================
-             OUR APPROACH
-        ======================================== -->
-
+        <!-- OUR APPROACH -->
         <section class="support-approach">
 
             <div class="support-approach-content">
+                <p class="section-label">Our Approach</p>
 
-                <p class="section-label">
-                    Our Approach
-                </p>
-
-                <h2>
-                    Supporting the whole child
-                </h2>
+                <h2>Supporting the whole child</h2>
 
                 <p>
                     Every child's needs are different.
@@ -295,100 +198,69 @@
                     educational and social development together.
                 </p>
 
-
                 <div class="support-list">
 
-                    <!-- PHYSICAL WELLBEING -->
                     <div class="support-item">
-
                         <h3>Physical Wellbeing</h3>
-
                         <p>
                             A safe home, nutritious food,
                             clothing and personal care.
                         </p>
-
                     </div>
 
-
-                    <!-- EDUCATION -->
                     <div class="support-item">
-
                         <h3>Education</h3>
-
                         <p>
                             Learning support, school resources
                             and opportunities to develop academically.
                         </p>
-
                     </div>
 
-
-                    <!-- EMOTIONAL WELLBEING -->
                     <div class="support-item">
-
                         <h3>Emotional Wellbeing</h3>
-
                         <p>
                             A caring environment where children
                             feel valued, respected and supported.
                         </p>
-
                     </div>
 
-
-                    <!-- PERSONAL DEVELOPMENT -->
                     <div class="support-item">
-
                         <h3>Personal Development</h3>
-
                         <p>
                             Recreation, social development and
                             life skills that help children prepare
                             for their future.
                         </p>
-
                     </div>
 
                 </div>
-
             </div>
 
         </section>
 
-
-        <!-- ========================================
-             PART 3 - FAQ ACCORDION
-        ======================================== -->
-
+        <!-- FAQ ACCORDION -->
         <section
             class="faq-section"
             aria-labelledby="faq-heading"
         >
 
             <div class="section-heading">
-
                 <p class="section-label">
                     Frequently Asked Questions
                 </p>
 
-                <h2 id="faq-heading">
-                    How can we help?
-                </h2>
+                <h2 id="faq-heading">How can we help?</h2>
 
                 <p>
                     Find out more about our proposed services
                     and ways to get involved.
                 </p>
-
             </div>
-
 
             <div class="faq-list">
 
                 <!-- FAQ 1 -->
                 <div class="faq-item">
-
                     <h3>
                         <button
                             class="faq-question"
@@ -398,11 +270,7 @@
                             aria-controls="faq-answer-1"
                         >
                             What services does Tshinakaho Haven aim to provide?
-
-                            <span
-                                class="faq-icon"
-                                aria-hidden="true"
-                            >+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                     </h3>
 
@@ -413,22 +281,17 @@
                         aria-labelledby="faq-question-1"
                         hidden
                     >
-
                         <p>
                             We aim to provide safe accommodation,
                             nutritious meals, educational assistance,
                             personal care, emotional support,
                             recreation and life skills development.
                         </p>
-
                     </div>
-
                 </div>
-
 
                 <!-- FAQ 2 -->
                 <div class="faq-item">
-
                     <h3>
                         <button
                             class="faq-question"
@@ -438,11 +301,7 @@
                             aria-controls="faq-answer-2"
                         >
                             Will children receive educational support?
-
-                            <span
-                                class="faq-icon"
-                                aria-hidden="true"
-                            >+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                     </h3>
 
@@ -453,22 +312,17 @@
                         aria-labelledby="faq-question-2"
                         hidden
                     >
-
                         <p>
                             Educational support is one of our planned
                             services. It includes homework assistance,
                             school supplies, learning resources and
                             a suitable study environment.
                         </p>
-
                     </div>
-
                 </div>
-
 
                 <!-- FAQ 3 -->
                 <div class="faq-item">
-
                     <h3>
                         <button
                             class="faq-question"
@@ -478,11 +332,7 @@
                             aria-controls="faq-answer-3"
                         >
                             How can I volunteer?
-
-                            <span
-                                class="faq-icon"
-                                aria-hidden="true"
-                            >+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                     </h3>
 
@@ -493,7 +343,6 @@
                         aria-labelledby="faq-question-3"
                         hidden
                     >
-
                         <p>
                             Visit our
                             <a href="enquiry.html#enquiry-form">
@@ -502,15 +351,11 @@
                             and select Volunteer to tell us how
                             you would like to help.
                         </p>
-
                     </div>
-
                 </div>
-
 
                 <!-- FAQ 4 -->
                 <div class="faq-item">
-
                     <h3>
                         <button
                             class="faq-question"
@@ -521,11 +366,7 @@
                         >
                             How can I support Tshinakaho Haven
                             through donations?
-
-                            <span
-                                class="faq-icon"
-                                aria-hidden="true"
-                            >+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
                     </h3>
 
@@ -536,7 +377,6 @@
                         aria-labelledby="faq-question-4"
                         hidden
                     >
-
                         <p>
                             You can express interest in donating
                             food, clothing, educational materials
@@ -546,31 +386,20 @@
                                 enquiry form
                             </a>.
                         </p>
-
                     </div>
-
                 </div>
 
             </div>
 
         </section>
 
-
-        <!-- ========================================
-             GET INVOLVED
-        ======================================== -->
-
+        <!-- GET INVOLVED -->
         <section class="services-cta">
 
             <div>
+                <p class="section-label">Support Our Work</p>
 
-                <p class="section-label">
-                    Support Our Work
-                </p>
-
-                <h2>
-                    You can help us make a difference.
-                </h2>
+                <h2>You can help us make a difference.</h2>
 
                 <p>
                     Volunteers, donors, sponsors and community
@@ -579,38 +408,21 @@
                 </p>
 
                 <p>
-                    <a href="enquiry.html">
-                        Get Involved
-                    </a>
+                    <a href="enquiry.html">Get Involved</a>
                 </p>
-
             </div>
 
         </section>
 
     </main>
 
-
-    <!-- ========================================
-         FOOTER
-    ======================================== -->
-
+    <!-- FOOTER -->
     <footer>
-
+        <p>&copy; 2026 Tshinakaho Haven</p>
+        <p>56 Mozart Lane, Sagewood, South Africa</p>
         <p>
-            &copy; 2026 Tshinakaho Haven
+            <a href="tel:+27845630982">+27 84 563 0982</a>
         </p>
-
-        <p>
-            56 Mozart Lane, Sagewood, South Africa
-        </p>
-
-        <p>
-            <a href="tel:+27845630982">
-                +27 84 563 0982
-            </a>
-        </p>
-
     </footer>
 
 </body>
